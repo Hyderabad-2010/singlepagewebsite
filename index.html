@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Protfile</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/2669db738b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+      <nav>
+        <h1>Font-End-puls</h1>
+        <ul id="sidemenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Projects</a></li>
+            <li><a href="#Contact">Contact</a></li>
+            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+        </ul>
+        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+      </nav>
+      <div class="header-text">
+        <h2>Front-end-engineer</h2>
+        <p>work closely with designers to make website beautiful, function, and fast</p>
+    </div>
+      </div>
+    </div>
+
+<!-----about-->
+
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/iphone-1852901_640.jpg">
+            </div>
+            <div class="about-col-2">
+                <h2 class="sub-tittle">About Me</h2>
+                <p>work closely with designers to make website beautiful, function, and fast</p>
+                <div class="tab-tittle">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Front-End Coding</span></li>
+                        <li><span>Responsive Design</span></li>
+                        <li><span>Back-End Web Programming Languages</span></li>
+                        <li><span>SEO</span></li>
+                        <li><span>UX and UI</span></li>
+                        <li><span>Program Frameworks</span></li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Develop and implement a new feature ser for a e-commernce</span></li>
+                        <li><span>Optimised website code for mobile devices </span></li>
+                        <li><span></span>Sepearheaded the migration of legacy HTML/css to a moder React-based stack</span></li>
+                        <li><span>Designed a user-centric UI</span></li>
+                        <li><span>Implemented an automated testing framework</span></li>   
+                         </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>Masters in Chemical Engineer</span></li>
+                        <li><span>Bachelor's Degree in Chemical Engineer</span></li>
+                        </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!---------projects-------->
+
+<div id="services">
+<div class="container">
+    <h2 class="sub-tittle">Projects</h2>
+    <div class="services-list">
+    <div>
+        <i class="fa-solid fa-code"></i>
+        <h2>Web Design</h2>
+        <p>creating the visual elements and layout of a website</p>
+        <a href="#">learn more</a>
+    </div>
+
+    <div>
+        <i class="fa-solid fa-crop"></i>
+        <h2>UI/UX Design</h2>
+        <p>Developing visually appealing and user-friendly designs</p>
+        <a href="#">learn more</a>
+    </div>
+
+    <div>
+        <i class="fa-brands fa-app-store-ios"></i>
+        <h2>App Design</h2>
+        <p>Created user journeys & wireframes. Design the user interface (UI) and create the app in a test environment.</p>
+        <a href="#">learn more</a>
+    </div>
+
+    </div>
+</div>
+</div>
+
+<!------CONTACTS------>>
+<div id="Contact">
+    <div class="container">
+        <div class="row">
+        <div class="content-left">
+            <h2 class="sub-tittle">Contact</h2>
+            <p><i class="fa-sharp fa-solid fa-paper-plane"></i>contact@example.com</p>
+            <p><i class="fa-sharp fa-solid fa-square-phone"></i>0123456789</p>
+            <div class="social-icons">
+                <a href="https://facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-twitter-square"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <a href="images/download1.pdf" download class="btn btn2">Download CV</a>
+        </div>
+        <div class="content-right">
+            <form name="submit-to-google-sheet">
+                <input type="text" name="Name" placeholder="Your Name" required>
+                <input type="enail" name="enail" placeholder="Your Name" required>
+                <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn btn2">Submit</button>
+            </form>
+            <span id="msg"></span>
+        </div>
+     </div>
+    </div>
+    <div class="copyright">
+    <p>copyright © Krishna</p>
+</div>
+</div>
+
+<script>
+var tablinks = document.getElementsByClassName("tab-links");
+var tabcontents = document.getElementsByClassName("tab-contents");
+
+function opentab(tabname){
+    for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+    }
+
+    for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+    }
+
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+}
+</script>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu() {
+        sidemenu.style.right = "0"
+    }
+
+    function closemenu() {
+        sidemenu.style.right = "-200px";
+    }
+</script>
+
+<script>
+    const scriptURL ='https://script.google.com/macros/s/AKfycbzsOeUJJp4Pqq-DFiCcH7bst-lAqFSowXOq92wrwV7d0zNGIR9OrP3OeMqhS-E9FoOe/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfull"
+         setTimeout(function(){
+            msg.innerHTML = ""
+         },5000)
+         form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+
+    </body>
+</html>
+    
