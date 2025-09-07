@@ -341,7 +341,7 @@ nav .fa-solid{
         cursor: pointer;
     }
     
-  /*  nav ul{
+   nav ul{
         background-color: darkolivegreen;
         position: fixed;
         top: 0;
@@ -350,7 +350,7 @@ nav .fa-solid{
         height: 100vh;
         padding-top: 50px;
         z-index: 2;
-    } */
+    } 
 
 
     .nav-link ul {
